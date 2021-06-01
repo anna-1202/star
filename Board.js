@@ -1,0 +1,6 @@
+
+class Board{
+
+}
+
+export {Board};
