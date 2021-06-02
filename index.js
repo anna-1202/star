@@ -1,11 +1,11 @@
-//import {Board} from "./Board.js";
+const Board = require("./Board");
 
 let width = 8;
 let height =8;
 const symbol = "*";
 
 let arr = [];
-//let board1 = new Board();
+let board1 = new Board();
 //console.log(board1);
 
 

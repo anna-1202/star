@@ -1,6 +1,9 @@
 
 class Board{
+    constructor() {
+        console.log("New instance of Board created");
+    }
 
 }
 
-export {Board};
+module.exports = Board
