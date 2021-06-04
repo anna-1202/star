@@ -3,17 +3,15 @@ const Board = require("./Board");
 let width = 8;
 let height =8;
 const symbol = "*";
-
 let arr = [];
-let board1 = new Board();
-//console.log(board1);
-
 
 fillArray();
-main();
+//main();
 
 function main(){
-	forwardArr(true);
+	let board1 = new Board(width, height);
+	//forwardArr(true);
+	board1.forward(true);
 	downArr(true);
 	backArr(true);
 	upArr(true);
@@ -67,11 +65,14 @@ function forwardArr (isClean){
 			if (isClean) {
 				arr[0][j-1] = " ";
 			}
+
 			print();
 			wait(0.5);
 			console.clear();
 		}
 }
+
+
 
 
 function downArr(isClean){
@@ -117,8 +118,6 @@ function fillArray(){
 	for(let i=0; i<arr.length; i++){
 		arr[i] = new Array(width);
 	}
-
-
 	for (let i=0; i<arr.length; i++){
 		for (let j=0; j<arr[i].length; j++){
 			arr[i][j] = "-";
